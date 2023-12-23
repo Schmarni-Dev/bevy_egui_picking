@@ -43,7 +43,6 @@ fn setup_worldspace(
         output_texture.texture_descriptor.size = size;
         output_texture
     });
-    let mut transform = Transform::looking_at(Transform::IDENTITY, Vec3::Y, Vec3::splat(1.5));
     commands.spawn((
         PbrBundle {
             mesh: meshes.add(shape::Plane::default().into()),
@@ -55,7 +54,7 @@ fn setup_worldspace(
 
                 ..default()
             }),
-            transform,
+            transform: Transform::looking_at(Transform::IDENTITY, Vec3::Y, Vec3::splat(1.5)),
             ..default()
         },
         WorldSpaceUI::new(output_texture, 1.0, 1.0),
