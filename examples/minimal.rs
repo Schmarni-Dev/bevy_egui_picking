@@ -30,8 +30,8 @@ fn setup_worldspace(
 ) {
     let output_texture = images.add({
         let size = Extent3d {
-            width: 256,
-            height: 256,
+            width: 512,
+            height: 512,
             depth_or_array_layers: 1,
         };
         let mut output_texture = Image {
